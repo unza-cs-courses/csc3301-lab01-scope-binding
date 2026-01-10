@@ -39,24 +39,7 @@ jobs:
       if: always()
       run: |
         echo "=== Test Results ==="
-        if [ -f test_results.json ]; then
-          python -c "
-import json
-with open('test_results.json') as f:
-    data = json.load(f)
-    
-passed = sum(1 for t in data.get('tests', []) if t['outcome'] == 'passed')
-failed = sum(1 for t in data.get('tests', []) if t['outcome'] == 'failed')
-total = passed + failed
-
-print(f'Passed: {passed}/{total}')
-print(f'Score: {passed * 100 // max(total, 1)}%')
-
-for t in data.get('tests', []):
-    status = '✓' if t['outcome'] == 'passed' else '✗'
-    print(f\"  {status} {t['nodeid'].split('::')[-1]}\")
-"
-        fi
+        python3 .github/scripts/display_results.py
     
     - name: Upload test results
       if: always()
