@@ -1,0 +1,40 @@
+{
+  "student_id": "binding",
+  "variant_seed": 333234734,
+  "scope_values": {
+    "global": "GLOBAL_ALPHA",
+    "enclosing": "ENCLOSING_OMEGA",
+    "local": "LOCAL_PHI",
+    "builtin": "<class 'int'>"
+  },
+  "counter_tests": {
+    "initial_values": [
+      20,
+      29,
+      42
+    ],
+    "expected_increments": [
+      21,
+      30,
+      43
+    ],
+    "expected_decrements": [
+      19,
+      28,
+      41
+    ]
+  },
+  "closure_tests": {
+    "multiplier_input": 12,
+    "expected_results": [
+      0,
+      12,
+      24,
+      36,
+      48
+    ]
+  },
+  "introspection_tests": {
+    "secret_value": 43
+  }
+}
