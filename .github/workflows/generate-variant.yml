@@ -16,6 +16,8 @@ jobs:
   generate:
     name: Generate Unique Variant
     runs-on: ubuntu-latest
+    # Skip if this is a template repo (only run on student repos)
+    if: ${{ !github.event.repository.is_template }}
 
     permissions:
       contents: write
