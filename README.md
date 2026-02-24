@@ -98,28 +98,27 @@ pytest tests/visible/test_lab1.py::TestTask3ScopeModifiers -v
 pytest tests/visible/test_lab1.py::TestTask4Introspection -v
 ```
 
-**Note:** Visible tests run on every push. Hidden tests with additional edge cases will run after the submission deadline.
+**Note:** Testing is local-only. There is no automatic feedback when you push — you must run the tests yourself before submitting. Hidden tests with additional edge cases will be run by the instructor after the submission deadline.
 
 ---
 
 ## Submission
 
 1. Complete all tasks in the `src/` directory
-2. Ensure all visible tests pass: `pytest tests/visible/ -v`
-3. Push your changes to trigger autograding
-4. Check the Actions tab for your results
+2. Run all visible tests locally and ensure they pass: `pytest tests/visible/ -v`
+3. Push your code to your repository before the deadline
 
 ---
 
 ## Grading
 
-| Component | Points | When |
-|-----------|--------|------|
-| Visible Tests | 40 | Every push |
-| Hidden Tests | 30 | After deadline |
-| Code Quality | 20 | Manual review |
-| Plagiarism | -10 | If flagged |
-| **Total** | 100 | |
+| Component | Points |
+|-----------|--------|
+| Visible Tests | 40 |
+| Hidden Tests | 30 |
+| Code Quality | 20 |
+| Plagiarism | -10 |
+| **Total** | 100 |
 
 ---
 
@@ -131,7 +130,6 @@ pytest tests/visible/test_lab1.py::TestTask4Introspection -v
 │   ├── scripts/
 │   │   └── display_results.py
 │   └── workflows/
-│       ├── autograding.yml      # Runs visible tests
 │       └── generate-variant.yml # Generates student variant
 ├── scripts/
 │   ├── variant_generator.py     # Creates unique test values
