@@ -40,3 +40,7 @@ test_results.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Generated per-student artifacts (created by workflow / scripts)
+.variant_config.json
+ASSIGNMENT.md
